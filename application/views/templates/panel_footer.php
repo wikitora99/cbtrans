@@ -142,7 +142,7 @@
               <select name="reciever" id="reciever" class="form-control">
                 <option value="xxx" selected>Pilih Rekening</option>
               <?php foreach ($members as $m): ?>
-                <option value="<?= $m['id']; ?>"><?= $m['account']; ?></option>
+                <option value="<?= $m['id']; ?>"><?= $m['account']; ?> | <?= $m['name']; ?></option>
               <?php endforeach; ?>
               </select>
             </div>
