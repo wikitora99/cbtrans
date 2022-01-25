@@ -1,0 +1,45 @@
+.img-load{
+  position: fixed;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0);
+  z-index: 99999;
+  transition: .75s;
+  padding: 100px 0;
+}
+
+.img-load:target{
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0,0,0,.8);
+}
+
+.img-load img{
+  max-height: 100%;
+}
+
+.img-load:target img {
+  animation: loadImage .75s;
+}
+
+@keyframes loadImage{
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1; 
+  }
+}
+
+.img-load .img-close{
+  position: fixed;
+  top: 50px;
+  left: 50%;
+}
