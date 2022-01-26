@@ -54,7 +54,7 @@
     public function getByAccount()
     {
       $this->db->where('role_id', 3);
-      $this->db->order_by('account', 'ASC');
+      $this->db->order_by('name', 'ASC');
       return $this->db->get('member')->result_array();
     }
 
